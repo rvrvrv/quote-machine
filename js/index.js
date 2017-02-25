@@ -6,15 +6,15 @@ $(document).ready(function () {
 	$.ajaxSetup({
 		cache: false
 	});
-	//Upon site loading, fetch a quote
+	//Upon site loading, fetch and display a quote
 	fetchQuote();
 });
 
 function fetchQuote() {
 	//Animated exit
-	$('#quoteBtn').prop('disabled', true);
+	$('#quoteBtn').css('disabled', true);
 	$('#quoteBtn').text('Getting quote...');
-	$('.twtAuth').addClass('fadeOutUp');
+	$('#twtAuth').addClass('fadeOutUp');
 	$('#theQuote').fadeTo(50, 0.005);
 	$('.bigBox').css('background', '#fef7a6');
 
@@ -34,13 +34,12 @@ function checkQuote(data) {
 	let quote = data.content.slice(3, this.length - 5).trim();
 	//Store author data
 	let author = data.title;
-	//If quote/author is invalid, fetch new quote
-	if (quote.match(/[\[#<&;]|(shi|drun)/g) ||
+	//If quote/author is invalid or profane, fetch new quote
+	if (quote.match(/[\[#<&;]|(shit|drunk|fart)/gi) ||
 		author.match(/[#<&;\(]/g) ||
 		(quote + author).length > 135)
 		fetchQuote();
 	else setTimeout(() => {
-		console.log(quote);
 		displayQuote(quote, author);
 	}, 200);
 }
@@ -54,9 +53,9 @@ function displayQuote(quote, author) {
 	//Animated entrance  
 	$('.bigBox').css('background', '#c8f7d0');
 	$('#theQuote').fadeTo(200, 1);
-	$('.twtAuth').removeClass('fadeOutUp');
-	setTimeout(() => $('.twtAuth').addClass('fadeInDown'), 200);
-	$('#quoteBtn').prop('disabled', false);
+	$('#twtAuth').removeClass('fadeOutUp');
+	setTimeout(() => $('#twtAuth').addClass('fadeInDown'), 200);
+	$('#quoteBtn').css('disabled', false);
 	$('#quoteBtn').text('Get another quote');
 }
 
