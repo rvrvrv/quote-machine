@@ -14,7 +14,7 @@ function fetchQuote() {
 	//Animated exit
 	$('#quoteBtn').prop('disabled', true);
 	$('#quoteBtn').text('Getting quote...');
-	$('#theAuthor').addClass('fadeOutUp');
+	$('.twtAuth').addClass('fadeOutUp');
 	$('#theQuote').fadeTo(50, 0.005);
 	$('.bigBox').css('background', '#fef7a6');
 
@@ -54,8 +54,8 @@ function displayQuote(quote, author) {
 	//Animated entrance  
 	$('.bigBox').css('background', '#c8f7d0');
 	$('#theQuote').fadeTo(200, 1);
-	$('#theAuthor').removeClass('fadeOutUp');
-	setTimeout(() => $('#theAuthor').addClass('fadeInDown'), 200);
+	$('.twtAuth').removeClass('fadeOutUp');
+	setTimeout(() => $('.twtAuth').addClass('fadeInDown'), 200);
 	$('#quoteBtn').prop('disabled', false);
 	$('#quoteBtn').text('Get another quote');
 }
