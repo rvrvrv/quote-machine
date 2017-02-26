@@ -1,97 +1,149 @@
-html {
-	box-sizing: border-box;
-}
+	html {
+		box-sizing: border-box;
+	}
 
-*,
-*:before,
-*:after {
-	box-sizing: inherit;
-	-webkit-transition: all 0.4s ease;
-	transition: all 0.4s ease;
-}
+	*,
+	*:before,
+	*:after {
+		box-sizing: inherit;
+		-webkit-transition: all 0.4s ease;
+		transition: all 0.4s ease;
+	}
 
-.main {
-	height: 100%;
-}
+	.main {
+		height: 100%;
+	}
 
-body {
-	background-image: url("https://i.imgsafe.org/ac54421bc3.jpg");
-	font-size: 16px;
-	text-align: center;
-}
+	body {
+		background-image: url("https://i.imgsafe.org/ac54421bc3.jpg");
+		font-size: 16px;
+		text-align: center;
+	}
 
-h1 {
-	margin: 20px 0 50px 0;
-	font-family: Chewy, Verdana;
-	font-size: 4em;
-	line-height: 80%;
-	color: #102C41;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	cursor: default;
-}
+	h1 {
+		margin: 20px 0 50px 0;
+		font-family: Chewy, Verdana;
+		font-size: 4em;
+		line-height: 80%;
+		color: #102C41;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		cursor: default;
+	}
 
-h1:hover {
-	color: #204D74;
-}
+	h1:hover {
+		color: #204D74;
+	}
 
-.bigBox {
-	background-color: #c8f7d0;
-	width: 90%;
-	max-width: 700px;
-	border-radius: 10px;
-	margin: 7% auto;
-	box-shadow: 0px 0px 25px 25px rgba(255, 255, 255, .6);
-}
+	.bigBox {
+		background-color: #c8f7d0;
+		width: 90%;
+		max-width: 700px;
+		border-radius: 10px;
+		margin: 7% auto;
+		box-shadow: 0px 0px 25px 25px rgba(255, 255, 255, .6);
+	}
 
-.bigBox:hover {
-	background-color: #c8f6bf;
-	box-shadow: 0px 0px 35px 35px rgba(255, 255, 255, .6);
-}
+	.bigBox:hover {
+		background-color: #c8f6bf;
+		box-shadow: 0px 0px 35px 35px rgba(255, 255, 255, .6);
+	}
 
-#theQuote {
-	margin: 1% 0.6%;
-	min-height: 90px;
-	line-height: 1.5;
-	font: bold 1.6em Prociono;
-}
+	#theQuote {
+		margin: 1% 0.6% 5% 0.6%;
+		min-height: 90px;
+		line-height: 1.5;
+		font: bold 2em Prociono;
+	}
 
-#twtAuth {
-	opacity: 0;
-}
+	#twtAuth {
+		position: relative;
+		bottom: 0;
+		vertical-align: bottom;
+		opacity: 0;
+	}
 
-#tweet {
-	text-align: left;
-	font-size: 1em;
-}
+	#tweet {
+		text-align: left;
+		font-size: 1em;
+	}
 
-#theAuthor {
-	font: 2em Pacifico;
-	text-align: right;
-	margin-top: 3%;
-	margin-bottom: 1.5%;
-	padding-right: 10px;
-	line-height: 90%;
-}
+	#theAuthor {
+		font: 2em Pacifico;
+		text-align: right;
+		margin-top: 3%;
+		margin-bottom: 1.5%;
+		padding-right: 10px;
+		line-height: 90%;
+	}
 
-#quoteBtn {
-	padding: 10px;
-	font-size: 2.8vh;
-	border-radius: 10px;
-}
+	.btnBox {
+		display: block;
+	}
 
-#quoteBtn:focus {
-	outline: none;
-}
+	#quoteBtn {
+		padding: 10px;
+		font-size: 2.8vh;
+		border-radius: 10px;
+		margin: 0 auto;
+	}
 
-#quoteBtn:disabled {
-	color: #000;
-	cursor: wait;
-}
+	#quoteBtn:focus {
+		outline: none;
+	}
 
-footer {
-	position: absolute;
-	bottom: 0;
-}
+	#quoteBtn:disabled {
+		color: #000;
+		cursor: wait;
+	}
+
+	footer {
+		position: absolute;
+		bottom: 0;
+	}
+
+	/* For mobile devices */
+
+	@media screen and (orientation: portrait) and (max-height: 768px) {
+		h1 {
+			font-size: 3em;
+			margin-bottom: 1%;
+		}
+		#theQuote {
+			font-size: 1.8em;
+		}
+		#twtAuth {
+			padding-bottom: 2%;
+		}
+		#quoteBtn {
+			position: fixed;
+			bottom: 6%;
+			left: 10%;
+			width: 80%;
+		}
+		footer {
+			display: none;
+		}
+	}
+
+	@media screen and (orientation: landscape) and (max-width: 768px) {
+		h1 {
+			font-size: 3em;
+			margin-bottom: 1%;
+		}
+		.bigBox {
+			margin: 2% auto;
+		}
+		#theQuote {
+			font-size: 1.8em;
+		}
+		#quoteBtn {
+			position: fixed;
+			bottom: 7%;
+			left: 25%;
+			width: 50%;
+			font-size: 3vw;
+		}
+	}
