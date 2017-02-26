@@ -25,7 +25,7 @@ function fetchQuote(first) {
 		})
 		.fail((err) => {
 			console.error('Error retrieving data. Trying again.');
-			fetchQuote();
+			fetchQuote(true);
 		});
 }
 
@@ -38,7 +38,7 @@ function checkQuote(data) {
 	if (quote.match(/[\[#<&;]|(fuck|shit|sex|drunk|fart)/gi) ||
 		author.match(/[#<&;\(]/g) ||
 		(quote + author).length > 135)
-		fetchQuote();
+		fetchQuote(true);
 	//Otherwise, display the quote
 	else setTimeout(() => {
 		displayQuote(quote, author);
