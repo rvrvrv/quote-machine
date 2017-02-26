@@ -11,7 +11,6 @@ $(document).ready(function () {
 });
 
 function fetchQuote(first) {
-	console.log($('#twtAuth').css('opacity'));
 	//Animated exit
 	$('#quoteBtn').prop('disabled', true);
 	$('#quoteBtn').text('Getting quote...');
