@@ -35,7 +35,7 @@ function checkQuote(data) {
 	//Store author data
 	let author = data.title;
 	//If quote/author is invalid or profane, fetch new quote
-	if (quote.match(/[\[#<&;]|(fuck|shit|drunk|fart)/gi) ||
+	if (quote.match(/[\[#<&;]|(fuck|shit|sex|drunk|fart)/gi) ||
 		author.match(/[#<&;\(]/g) ||
 		(quote + author).length > 135)
 		fetchQuote();
