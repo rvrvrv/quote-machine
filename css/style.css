@@ -58,6 +58,10 @@ h1:hover {
 	font: bold 1.6em Prociono;
 }
 
+#twtAuth {
+	opacity: 0;
+}
+
 #tweet {
 	text-align: left;
 	font-size: 1em;
@@ -83,7 +87,7 @@ h1:hover {
 }
 
 #quoteBtn:disabled {
-	color: black;
+	color: #000;
 	cursor: wait;
 }
 
