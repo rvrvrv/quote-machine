@@ -13,7 +13,7 @@ $(document).ready(function () {
 function fetchQuote(first) {
 	//Animated exit
 	$('#quoteBtn').prop('disabled', true);
-	$('#quoteBtn').text('Getting quote...');
+	$('#quoteBtn').html('Getting quote...&nbsp;<i class="fa fa-spinner fa-pulse fa-fw"></i>');
 	$('#theQuote').fadeTo(50, 0.005);
 	if (!first) $('#twtAuth').addClass('fadeOutUp');
 	$('.bigBox').css('background', '#fef7a6');
@@ -59,7 +59,7 @@ function displayQuote(quote, author) {
 		$('#twtAuth').addClass('fadeInDown');
 			}, 200);
 	$('#quoteBtn').prop('disabled', false);
-	$('#quoteBtn').text('Get another quote');
+	$('#quoteBtn').html('Get another quote');
 }
 
 //When button is clicked, fetch a new quote
