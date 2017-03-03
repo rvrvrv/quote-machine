@@ -1,7 +1,7 @@
 /*jshint browser: true, esversion: 6*/
-/* global $, console */
+/* global $, console, profaneRegEx */
 
-$(document).ready(function () {
+$(document).ready(function() {
 	//Set cache to false for new quotes
 	$.ajaxSetup({
 		cache: false
@@ -30,16 +30,19 @@ function fetchQuote(first) {
 }
 
 function checkQuote(data) {
-	//Remove <p> tags and trim quote
-	let quote = data.content.slice(3, this.length - 5).trim();
+	//Remove <p> tags, trim quote, and decode numeric entity
+	let quote = data.content.slice(3, this.length - 5).trim().replace(/&#8217;/g, '\'');
 	//Store author data
 	let author = data.title;
-	//If quote/author is invalid or profane, fetch new quote
-	if (quote.match(/[\[#<&;]|(fuck|shit|sex|drunk|fart)/gi) ||
-		author.match(/[#<&;\(]/g) ||
+	/*If quote is profane, quote/author is invalid, or
+  quote is too long, fetch new quote.
+  (profaneRegEx is stored in external JS file)*/
+	if (quote.match(profaneRegEx) ||
+		quote.match(/[\[#<>&;]/g) ||
+		author.match(/[#<>&;\(]/g) ||
 		(quote + author).length > 135)
 		fetchQuote(true);
-	//Otherwise, display the quote
+	//Otherwise, display the quote after 200ms
 	else setTimeout(() => {
 		displayQuote(quote, author);
 	}, 200);
@@ -57,7 +60,7 @@ function displayQuote(quote, author) {
 	$('#twtAuth').removeClass('fadeOutUp');
 	setTimeout(() => {
 		$('#twtAuth').addClass('fadeInDown');
-			}, 200);
+	}, 200);
 	$('#quoteBtn').prop('disabled', false);
 	$('#quoteBtn').html('Get another quote');
 }
