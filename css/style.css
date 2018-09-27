@@ -1,149 +1,165 @@
-	html {
-		box-sizing: border-box;
-	}
+html {
+  box-sizing: border-box;
+}
 
-	*,
-	*:before,
-	*:after {
-		box-sizing: inherit;
-		-webkit-transition: all 0.4s ease;
-		transition: all 0.4s ease;
-	}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
-	.main {
-		height: 100%;
-	}
+body {
+  background: #fff
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23513303' fill-opacity='0.11'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  font: 16px sans-serif;
+  text-align: center;
+}
 
-	body {
-		background-image: url("https://i.imgsafe.org/ac54421bc3.jpg");
-		font-size: 16px;
-		text-align: center;
-	}
+a {
+  transition: color .2s;
+}
 
-	h1 {
-		margin: 20px 0 50px 0;
-		font-family: Chewy, Verdana;
-		font-size: 4em;
-		line-height: 80%;
-		color: #102C41;
-		-webkit-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-		cursor: default;
-	}
+h1 {
+  color: #102c41;
+  font: 4em "Chewy", Verdana, sans-serif;
+  line-height: 80%;
+  margin: 20px 0 50px;
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: font-size .2s, margin-bottom .2s;
+}
 
-	h1:hover {
-		color: #204D74;
-	}
+h1:hover {
+  color: #204d74;
+}
 
-	.bigBox {
-		background-color: #c8f7d0;
-		width: 90%;
-		max-width: 700px;
-		border-radius: 10px;
-		margin: 7% auto;
-		box-shadow: 0px 0px 25px 25px rgba(255, 255, 255, .6);
-	}
+.main {
+  height: 100%;
+}
 
-	.bigBox:hover {
-		background-color: #c8f6bf;
-		box-shadow: 0px 0px 35px 35px rgba(255, 255, 255, .6);
-	}
+.quote-box {
+  background-color: #c8f7d0;
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px 25px rgba(255, 255, 255, 0.4);
+  margin: 7% auto;
+  padding: 1em;
+  width: 90%;
+  min-width: 320px;
+  max-width: 700px;
+  transition: background-color .4s, margin .2s;;
+}
 
-	#theQuote {
-		margin: 1% 0.6% 5% 0.6%;
-		min-height: 90px;
-		line-height: 1.5;
-		font: bold 2em Prociono;
-	}
+.quote-box:hover {
+  background-color: #c8f6bf;
+  box-shadow: 0px 0px 35px 35px rgba(255, 255, 255, 0.6);
+}
 
-	#twtAuth {
-		position: relative;
-		bottom: 0;
-		vertical-align: bottom;
-		opacity: 0;
-	}
+.quote {
+  font: bold 2em "Prociono";
+  line-height: 1.3;
+  margin: 1% 0.6% 5% 0.6%;
+  min-height: 90px;
+  transition: font-size .2s, margin .2s;
+}
 
-	#tweet {
-		text-align: left;
-		font-size: 1em;
-	}
+.quote-bottom {
+  position: relative;
+  bottom: 0;
+  opacity: 0; /* Hide upon initial load */
+  vertical-align: bottom;
+  transition: padding-bottom .2s;
+}
 
-	#theAuthor {
-		font: 2em Pacifico;
-		text-align: right;
-		margin-top: 3%;
-		margin-bottom: 1.5%;
-		padding-right: 10px;
-		line-height: 90%;
-	}
+.tweet {
+  font-size: 1em;
+  text-align: left;
+}
 
-	.btnBox {
-		display: block;
-	}
+.author {
+  font: 2em "Pacifico", cursive;
+  line-height: 0.9;
+  text-align: right;
+  margin-top: 3%;
+  margin-bottom: 1.5%;
+  padding-right: 10px;
+}
 
-	#quoteBtn {
-		padding: 10px;
-		font-size: 1.3em;
-		border-radius: 10px;
-		margin: 0 auto;
-	}
+.btnBox {
+  display: block;
+}
 
-	#quoteBtn:focus {
-		outline: none;
-	}
+.btn {
+  padding: 10px;
+  font-size: 1.3em;
+  border-radius: 10px;
+  margin: 0 auto;
+  transition: all .2s;
+}
 
-	#quoteBtn:disabled {
-		color: #000;
-		cursor: wait;
-	}
+.btn:focus {
+  outline: none !important;
+}
 
-	footer {
-		position: absolute;
-		bottom: 0;
-	}
+.btn:disabled {
+  color: #000;
+  cursor: wait;
+}
 
-	/* For mobile devices */
+footer {
+  position: absolute;
+  bottom: 0;
+}
 
-	@media screen and (orientation: portrait) and (max-height: 768px) {
-		h1 {
-			font-size: 3em;
-			margin-bottom: 1%;
-		}
-		#theQuote {
-			font-size: 1.8em;
-		}
-		#twtAuth {
-			padding-bottom: 2%;
-		}
-		#quoteBtn {
-			position: fixed;
-			bottom: 6%;
-			left: 10%;
-			width: 80%;
-		}
-		footer {
-			display: none;
-		}
-	}
+/* Narrow screens */
 
-	@media screen and (orientation: landscape) and (max-width: 768px) {
-		h1 {
-			font-size: 3em;
-			margin-bottom: 1%;
-		}
-		.bigBox {
-			margin: 2% auto;
-		}
-		#theQuote {
-			font-size: 1.8em;
-		}
-		#quoteBtn {
-			position: fixed;
-			bottom: 7%;
-			left: 25%;
-			width: 50%;
-			font-size: 3vw;
-		}
-	}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3em;
+    margin-bottom: 1%;
+  }
+  .quote-box {
+    min-width: calc(100vw - 2em);
+  }
+  .quote {
+    font-size: 1.8em;
+  }
+  footer {
+    display: none;
+  }
+}
+
+/* Short screens */
+
+@media (max-height: 550px) {
+  footer {
+    display: none;
+  }
+}
+
+@media (max-height: 450px) {
+  h1 {
+    font-size: 9vh;
+    margin-bottom: 1%;
+  }
+  .quote-box {
+    font-size: 4vh;
+    margin: 1% auto;
+  }
+  .quote {
+    margin: 1%;
+    min-height: 0;
+  }
+}
+
+/* Small screens */
+@media (max-width: 600px), (max-height: 450px) {
+  .btn {
+    position: fixed;
+    bottom: 6%;
+    left: 10%;
+    width: 80%;
+  }
+}
